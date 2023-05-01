@@ -16,7 +16,7 @@ document.getElementById("getrec").addEventListener("click", (event) => {
   var ref = canvas.toDataURL("image/jpg");
   $.ajax({
     type: "POST",
-    url: "http://127.0.0.1:5000/getrecipe",
+    url: "https://cook-5vyv.onrender.com/getrecipe",
     datatype: "html",
     data: {
       img: ref,

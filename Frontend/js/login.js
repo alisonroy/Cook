@@ -11,7 +11,7 @@ $("#login-button").click(function (event) {
   var pass = document.getElementById("pass-log").value;
   $.ajax({
     type: "POST",
-    url: "http://alisonroy.pythonanywhere.com/login",
+    url: "https://cook-5vyv.onrender.com/login",
     datatype: "html",
     data: {
       email: email,
@@ -33,7 +33,7 @@ $("#login-button").click(function (event) {
           $("#form-login").fadeOut(500);
           $(".wrapper").addClass("form-success");
           setTimeout(() => {
-            window.location.pathname = "/frontend/index.html";
+            window.location.pathname = "/home.html";
           }, 5000);
         }
       }
@@ -59,7 +59,7 @@ $("#signup-button").click(function (event) {
     if (pass === re_pass && pass.length >= 8) {
       $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:5000/signup",
+        url: "https://cook-5vyv.onrender.com/signup",
         datatype: "html",
         data: {
           name: name,

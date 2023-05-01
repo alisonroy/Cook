@@ -598,13 +598,18 @@ a {
   line-height: 28px;
 }
 
-#snap, #getrec{
+#snap, #getrec {
   border-radius: 15px;
   margin: 5px;
   padding: 10px;
   background-color: #023047;
 }
-
+#ing{
+  border-radius: 15px;
+  margin: 5px;
+  padding: 10px;
+  background-color: #09a4ec;
+}
 .div-block-5 {
   padding-top: 30px;
   padding-bottom: 60px;
