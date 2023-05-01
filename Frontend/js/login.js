@@ -11,7 +11,7 @@ $("#login-button").click(function (event) {
   var pass = document.getElementById("pass-log").value;
   $.ajax({
     type: "POST",
-    url: "http://127.0.0.1:5000/login",
+    url: "http://alisonroy.pythonanywhere.com/login",
     datatype: "html",
     data: {
       email: email,
