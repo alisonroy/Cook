@@ -1,4 +1,5 @@
-flask
+Flask
+Gunicorn
 datetime
 random2
 Pillow
