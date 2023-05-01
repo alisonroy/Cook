@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request, render_template
 from datetime import datetime
 from hashlib import sha256
-import random
+import random2
 import base64
 from io import BytesIO
 from PIL import Image
@@ -87,7 +87,7 @@ def signup():
         email = request.form.get("email")
         mob_no = request.form.get("ph_no")
         auth = sha256()
-        rand = random.random()
+        rand = random2.random()
         auth.update(b'{rand}')
         auth_token = h.hexdigest()
         if password and email and mob_no and auth_token and name and request.method == 'POST':
@@ -136,7 +136,7 @@ def login():
                 if password == pass_chk[0][1]:
                     user = pass_chk[0][0]
                     auth = sha256()
-                    rand = random.random()
+                    rand = random2.random()
                     auth.update(b'{rand}')
                     auth_token = h.hexdigest()
                     updt_query = f"UPDATE `cook`.`login_details` SET `auth_token` = '{auth_token}' WHERE (`email` = '{email}');"
