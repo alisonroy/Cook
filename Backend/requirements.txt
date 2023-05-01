@@ -1,0 +1,9 @@
+flask
+datetime
+random2
+Pillow
+tensorflow
+flask-mysql
+numpy
+matplotlib
+keras_preprocessing
