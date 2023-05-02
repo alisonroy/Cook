@@ -598,11 +598,12 @@ a {
   line-height: 28px;
 }
 
-#snap, #getrec {
+#snap, #getrec,.ttsb,.tts{
   border-radius: 15px;
   margin: 5px;
   padding: 10px;
   background-color: #023047;
+  color: #fff;
 }
 #ing{
   border-radius: 15px;
