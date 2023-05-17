@@ -166,6 +166,7 @@ def login():
 def getrecipe():
     try:
         file = request.form.get('img')
+        email = request.form.get("email")
         starter = file.find(',')
         image_data = file[starter+1:]
         image_data = bytes(image_data, encoding="ascii")
@@ -192,6 +193,21 @@ def getrecipe():
         usr_chk.execute(usr_query)
         chk = usr_chk.fetchall()
         usr_chk.close()
+        get_query = f"SELECT `history` FROM `cook`.`login_details` WHERE `email`='{email}';"
+        getchk = conn.cursor()
+        getchk.execute(get_query)
+        get = getchk.fetchall()
+        temp=get[0][0]
+        for i in chk:
+            if i[0] not in temp:
+                temp=temp+','+i[0]
+        getchk.close()
+        updt_query = f"UPDATE `cook`.`login_details` SET `history` = '{temp}' WHERE (`email` = '{email}');"
+        updt = conn.cursor()
+        updt.execute(updt_query)
+        conn.commit()
+        updt.close()
+        conn.close()
         return jsonify(chk)
 
     except Exception as e:

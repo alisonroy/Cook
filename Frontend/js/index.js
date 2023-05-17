@@ -10,7 +10,6 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 document.getElementById("snap").addEventListener("click", () => {
   context.drawImage(video, 0, 0, 250, 200);
 });
-console.log("tes");
 $("body").on("click", ".tts", function () {
   let speech = new SpeechSynthesisUtterance();
   speech.lang = "en";
@@ -36,6 +35,7 @@ document.getElementById("getrec").addEventListener("click", (event) => {
     datatype: "html",
     data: {
       img: ref,
+      email: localStorage.getItem("email"),
     },
     success: function (response) {
       var area = document.getElementById("recipes");
