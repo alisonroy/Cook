@@ -161,6 +161,20 @@ def login():
     except Exception as e:
         print(e)
 
+@app.route('/gethistory', methods=['POST'])
+def gethistory():
+    try:
+        email = request.form.get("email")
+        conn = mysql.connect()
+        det_query = f"SELECT `email`,`name`,`ph_no`,`history` FROM `cook`.`login_details` WHERE  email='{email}'"
+        det_csr = conn.cursor()
+        det_csr.execute(det_query)
+        det_chk = det_csr.fetchall()
+        det_csr.close()
+        conn.close()
+        return jsonify(det_chk)
+    except Exception as e:
+        print(e)
 
 @app.route('/getrecipe', methods=['POST'])
 def getrecipe():

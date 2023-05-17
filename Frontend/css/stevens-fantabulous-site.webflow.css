@@ -2085,3 +2085,20 @@ a {
   font-style: normal;
   font-display: swap;
 }
+.hea{
+  margin-top: 3.5rem;
+  height: 100vh; 
+  background-color: #6897bb;
+}
+.bg-card-clr{
+  background-color: #023047;
+  margin: 10px;
+}
+
+.test{
+  color: #023047 !important;
+}
+.txtclr{
+  color: #fff !important;
+
+}
