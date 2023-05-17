@@ -24,9 +24,9 @@ try:
 
     # MySQL configurations
     app.config['MYSQL_DATABASE_USER'] = "sgroot"
-    app.config['MYSQL_DATABASE_PASSWORD'] = "A13m2gmmOc$DLaE0"
+    app.config['MYSQL_DATABASE_PASSWORD'] = "BUB9-xUel9CE1xtD"
     app.config['MYSQL_DATABASE_DB'] = "cook"
-    app.config['MYSQL_DATABASE_HOST'] = "SG-rrs-ing-7481-mysql-master.servers.mongodirector.com"
+    app.config['MYSQL_DATABASE_HOST'] = "SG-cookit-7556-mysql-master.servers.mongodirector.com"
     mysql.init_app(app)
 except:
     print("Unable to connect to the database")
