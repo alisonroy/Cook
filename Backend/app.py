@@ -186,7 +186,7 @@ def getrecipe():
         image_data = bytes(image_data, encoding="ascii")
         im = Image.open(BytesIO(base64.b64decode(image_data)))
         im.save('image.png')
-        train_path = "train"
+        train_path = "validation"
         train_dataset = tf.keras.preprocessing.image_dataset_from_directory(
             train_path, seed=2509, image_size=(224, 224), batch_size=32)
         class_names = train_dataset.class_names
